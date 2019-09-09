@@ -1,0 +1,24 @@
+<!--
+The Query Selector
+
+The easiest way to query an element from the DOM
+
+-->
+
+$('#wrapper')
+
+const wrap = document.querySelector('#wrapper')
+console.log(wrap)
+
+const wmf = document.querySelector('#book-list li:nth-child(2).name')
+console.log(wmf)
+<!--Grab one element-->
+
+How to grab every 
+var books = document.querySelectorAll('#book-list li .name')
+<!--Everything with the class of name, inside of li, inside of book-list-->
+console.log(books)
+
+Array.from(books).forEach(function(book){
+    console.log(book);
+}
