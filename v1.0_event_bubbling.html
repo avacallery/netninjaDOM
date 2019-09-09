@@ -7,6 +7,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -14,5 +15,20 @@
 
 
 
+=======
+  
+//DELETE BOOKS
+const list = document.querySelector('#book-list ul'); 
+
+list.addEventListener('click', function(e){
+if (e.target.className == 'delete'){
+    const li = e.target.parentElement; 
+    list.removeChild(li);
+}
+
+})
+
+//We have an eventListener associated with the Ul. When we click on the Ul, we make sure we are clicking on a button. If we are clicking on a button, then we are running the code in line 13. We get the Li associated with it and remove the Li. 
+>>>>>>> v1.0_event_bubbling
 
 </script>
