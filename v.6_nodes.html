@@ -1,0 +1,33 @@
+<!--DOM Nodes-->
+
+Everything in this document is a node. 
+There's many different types and they each have numbers: 
+
+<!--Node Types - Return Values RESEARCH***-->
+text Nodes
+comment Nodes
+attributes
+
+const banner = document.querySelector('#page-banner');
+
+<!--What type of node?-->
+console.log('#page-banner node type is:' , banner.nodeType);
+#page-banner node type is: 1 
+
+<!--What is the name of the node?-->
+console.log('#page-banner node name is:' , banner.nodeName);
+#page-banner node name is a <!--div-->
+
+
+<!--Any child nodes? using a method... -->
+console.log('#page-banner had child nodes:' , banner.hasChildNodes{});
+true or false
+
+<!--Clone a node-->
+
+const clonedBanner = banner.cloneNode(true)
+console.log(clonedBanner);
+<!--true will clone the entire thing, the nested nodes, the children etc instead
+of just the one element #page-banner -->
+
+
