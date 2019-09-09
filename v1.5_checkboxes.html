@@ -1,0 +1,30 @@
+<script>
+//Checkboxes and Change Events 
+
+//a change event occurs when a form element changes. 
+//Like selecting a checkbox, or pressing a radio button.
+
+// <form id="add-book">
+//         <input type="checkbox" id="hide" /> ***THIS IS NEW 
+//         <label for="hide">Hide all books</label> ***THIS IS NEW
+// 	    	<input type="text" placeholder="Add a book..." />
+// 	    	<button>Add</button>
+// 	    </form>
+
+//We want to use it like a function. 
+
+const list = docuemnt.querySelector('#book-list ul'); 
+
+//HOW TO HIDE BOOKS
+const hideBox = document.querySelector("#hide");
+//#hide is the id of the input field
+hideBox.addEventListener('change', function(e){
+//We want to check if the box is checked
+if (hideBox.checked) {
+    list.style.display = "none"; 
+} else { 
+    list.style.display = "initial"; 
+    }   
+});
+
+</script>
