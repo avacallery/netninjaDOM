@@ -1,0 +1,37 @@
+<script>
+    //create tabbed content in javascript
+    //div surrounding the whole thing "tabbed-content"
+    //ul with li containing tabs you can click on
+    //each tab is represented by each panel (li)
+
+    //EXAMPLE
+    <li data-target="#about" class="active">About</li>
+    //when we click, we look for the data-target attribute, which has a value of an id #about
+    //only active panels will have a display of block, hence the "active" attribute 
+
+    const tabs = document.querySelector('.tabs');
+    const panels = document.querySelector('.panel');
+    tabs.addEventListener('click', function (e) {
+        //we want to check if the target is the li 
+        if (e.target.tagName == "Li") {
+            const targetPanel = document.querySelector(e.target.dataset.target);
+            //dataset looks for data attributes, like data-target="#about"
+            //Now, we cycle through the panels to check if they are active
+            panels.forEach(function (panel) {
+                if (panel == targetPanel) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            })
+        }
+        });
+
+
+
+
+
+
+
+
+</script>
