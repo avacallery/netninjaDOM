@@ -1,0 +1,29 @@
+<script>
+//In the terminal
+document.forms
+//this will return the elements using the <form> tag
+
+
+
+
+
+//ADD TO BOOKLIST 
+//First thing we want to do is add an event listener to the form.
+
+// <form id="add-book">
+//         <input type="checkbox" id="hide" />
+//         <label for="hide">Hide all books</label>
+// 	    	<input type="text" placeholder="Add a book..." />
+// 	    	<button>Add</button>
+// 	    </form>
+
+//What happens when we click a button in the form is that the form itself emits a submit event. Then, we define the action that takes place. This is the default behavior.
+
+const addForm = document.forms['add-book'];
+addForm.addEventListener("submit", function(e){
+    e.preventDefault(); 
+    const value = addForm.querySelector('input[type="text"]').value;
+console.log(value);
+});
+
+</script>
