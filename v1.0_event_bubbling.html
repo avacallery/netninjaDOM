@@ -1,0 +1,24 @@
+<script>
+
+//What is Event Bubbling?
+  //It's the event bubbling up through the DOM tree
+//It always occurs, for example, when you add a 'click' eventListner. The event originates at a certain element, and bubbles up to the parent element, the li, then to the ul, all the way up to the furthermost element. 
+  //If there are eventListeners added to those parentElements, then those will fire off too
+
+
+
+  
+//DELETE BOOKS
+const list = document.querySelector('#book-list ul'); 
+
+list.addEventListener('click', function(e){
+if (e.target.className == 'delete'){
+    const li = e.target.parentElement; 
+    list.removeChild(li);
+}
+
+})
+
+//We have an eventListener associated with the Ul. When we click on the Ul, we make sure we are clicking on a button. If we are clicking on a button, then we are running the code in line 13. We get the Li associated with it and remove the Li. 
+
+</script>
