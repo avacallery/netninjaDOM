@@ -1,0 +1,47 @@
+<script>
+
+//Create a search filter using Javascript
+//We do this by adding an eventListener to the search bar/input field. 
+//This input is going to be a keyUp event. 
+//keyup event is when we click a key and release it (that release is the keyup event)
+//When that event occurs, we need to find out the value of the input field. 
+//For example, when you are entering in the text "wise" in the search bar, 
+//every single letter is being run through the keyup event. 
+//The program reacts to it and grabs that value of "w" or "i" etc. 
+//Then what we want to do is compare the text value to any of the titles we have listed in our BookList. 
+//If it appears in the bookList, then we keep it. If not, it is filtered out/hidden. 
+
+//First, you will inspect the element that has the search bar. 
+
+const list = document.querySelector('#book-list ul'); 
+
+const searchBar = document.forms["search-books"].querySelector('input'); 
+searchBar.addEventListener("keyup", function(e){
+    //the first thing we want to do is grab the search term
+    const term = e.target.value.toLowerCase(); 
+    //the target is the thing thats emitting the event and that is the input field
+    //we want to grab the VALUE of that INPUT FIELD aka the TARGET
+
+    //Now we want to cycle through all the li text 
+    const books = list.getElementsByTagName('li'); 
+    //we need to turn into an array to cycle through 
+    Array.from(books).forEach(function(book){
+        const title = book.firstElementChild.textContent;
+        //the firstElementChild is the span aka where the text content is "The Wise Man"
+
+        //now, we create an if/else if the text is found 
+        if (title.toLowerCase().indexOf(term)!= -1){
+            //if this value returns a value of minus one we can be confident 
+            //that this term is not inside the title therefore we can filter out that title 
+            book.style.display ='block';
+        } else {
+            book.style.display = 'none'; 
+        }
+
+    });
+});  
+
+
+
+
+</script>
