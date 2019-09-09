@@ -1,0 +1,36 @@
+<script>
+
+//What we want is the value we got from v1.1 (which is 1Q84) and use it so we can add a new element/book to the list. 
+//We will add a new Li tag
+
+const addForm = document.forms['add-book'];
+addForm.addEventListener("submit", function(e){
+    e.preventDefault(); 
+    const value = addForm.querySelector('input[type="text"]').value;
+
+
+    //create elements
+    const li = document.createElement("li"); 
+    const bookName = document.createElement("span");
+    const deleteBtn = document.createElement("span");
+
+    //add content 
+    deleteBtn.textContent = "delete"; 
+    bookName.textContent = value;
+    
+
+});
+
+//the span elements are nested with the existing Li tag, so first of all, we need to append. 
+
+
+//append to DOM - ORDER does matter!!!
+//first, append to Li, then append to list
+li.appendChild(bookName);
+li.appendChild(deleteBtn);
+list.appendChild(li); 
+
+
+
+
+</script>
