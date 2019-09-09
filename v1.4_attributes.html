@@ -1,0 +1,35 @@
+<script>
+//Changing attributes using Javascript
+//How you can read into the DOM and read the attributes, review, change... etc
+
+//IN THE CONSOLE: 
+var book = document.querySelector('li:first-child.name'); 
+
+//console log book will return
+<span class="name">Name of the Wind</span>
+
+//IN THE CONSOLE how to reach in and grab attribute: 
+book.getAttribute('class'); 
+//name 
+
+
+
+//IN THE CONSOLE
+book.setAttribute('class', 'name-2'); 
+//this will return
+<span class="name-2">Name of the Wind</span>
+
+
+//If something has a certain attribute...
+book.hasAttribute('class')
+//returns TRUE
+
+
+//How to remove an attribute
+book.removeAttribute('class')
+console.log(book);
+//this will return
+<span>Name of the Wind</span>
+
+
+</script>
