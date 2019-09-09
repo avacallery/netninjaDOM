@@ -11,7 +11,32 @@ console.log('the parent node is:' , bookList.parentElement.parentElement);
 <!--Children Nodes- traversing down -->
 console.log(bookList.children);
 
-
 console.log(bookList.childNodes);
 <!--What returns is a collection of text, elements, li, ul-->
 childNodes returns the line breaks (text)
+
+
+
+<!-- DOM Traversal from sibling to sibling-->
+Elements that are on the same level. 
+
+const bookList = document.querySelector('#book-list');
+
+
+<!--Log the next node-->
+console.log('book-list next sibling is:' bookList.nextSibling);
+
+<!--Log the next element sibling-->
+console.log('book-list next element sibling is:' bookList.nextElementSibling);
+
+
+
+<!--Log the previous node-->
+console.log('book-list previous sibling is:' bookList.previousSibling);
+
+<!--Log the previous element sibling-->
+console.log('book-list previous element sibling is:' bookList.previousElementSibling);
+
+bookList.previousElementSibling.querySelector('p').innerHTML += "< br /> Too cool for everyone else!";
+<!--the previous Element sibling is <header>
+    and query selector will search inside the <header> -->
