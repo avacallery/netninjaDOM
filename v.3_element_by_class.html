@@ -1,0 +1,85 @@
+<!--
+
+Get elements by class: 
+
+You can use the same class for multiple elements in an html document. 
+for example:
+<h1 class="title">Bookorama</h1>
+
+in the console: 
+document.getElementsByClassName("title")
+returns - undefined
+console - titles
+returns - (an html collection) 
+(2) h1.title, h2.title 
+
+If you want to cycle through the titles or change the styles = 
+for (i=0; i < titles.length; i++) {
+    console.log(titles[i])
+}
+
+
+
+Get elements by tag name: 
+If you want to return a collection of elements with the same tag.
+
+If you want to grab all the <li> elements on the page: 
+
+in the console: 
+var lis = document.getElementByTagName('li')
+
+
+
+
+
+
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+
+    <div id="page-banner">
+        <h1 class="title">Bookorama</h1>
+        <p>Books for Ninjas</p>
+    </div>
+
+    <div id="book-list">
+        <h2 class="title">Books to Read></h2>
+    </div>
+
+</head>
+
+<body>
+    <script>
+        //to cycle through titles like an array
+
+        var titles = document.getElementsByClassName('title');
+
+        //console.log(Array.isArray(titles) 
+        //What you can use to check if something is an array
+
+        //console.log(Array.isArray(Array.from(titles)))
+        //this method will turn titles into an array
+
+        // Array.from(titles).forEach(function(item){
+        //     console.log(item);     
+
+        // }
+
+        //item is what is returned every time we loop through
+
+    </script>
+</body>
+
+</html>
