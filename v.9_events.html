@@ -1,0 +1,55 @@
+<!--Adding eventlisteners-->
+
+var h2 = document.querySelector('#book-list h2')
+
+h2.addEventListner('click', function(event){
+console.log(event.target); 
+console.log(event);
+});
+
+<!--Two paramenters: the 'click' event, 
+and a callback function, or whats going to fire when this event happens on a page
+
+when someone clicks on the h2 element, addEventListener will be listening to the clicks, and function will pass whatever is passed through the (e) or event parameter
+
+event.target; 
+.target is a property on the event object, this will tell us what element was clicked, or what is the target of the event
+-->
+
+
+<script>
+
+//Event listeners on the DELETE buttons 
+//we want to cycle through and add an eventListener to each one
+
+
+var buttons = document.querySelectorAll('#book-list.delete');
+
+Array.from(button).forEach(function(button){
+    button.addEventListner('click', function(e) {
+//what happens when the button is clicked: 
+    //We want to remove the li tag that the book-title is in 
+
+        const li = e.target.parentElement;
+    //Whe want to delete the li when it is clicked
+
+        li.parentNode.removeChild(li); 
+
+    //we want to remove (li) but we need to get to the parent. 
+    //This is acheived by li.parentNode.removeChild(what you want to remove)
+     
+    });
+}); 
+
+//e.target gets the exact button that we clicked, whether it is the second third first or fourth button.  
+
+
+
+//PREVENTING A LINK
+const link = document.querySelector('#page-banner a'); 
+link.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    console.log('navigation to', e.target.textContent, ' was prevented')
+}); 
+</script>
+
