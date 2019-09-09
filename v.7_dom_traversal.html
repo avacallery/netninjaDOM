@@ -1,0 +1,17 @@
+<!--DOM Traversal (parent/child)-->
+
+const bookList = document.querySelector('#book-list');
+
+<!--Parent Node -  traversing upwards -->
+console.log('the parent node is:' , bookList.parentNode);
+console.log('the parent node is:' , bookList.parentElement.parentElement);
+<!--.parentElement will find the parent of #book-list which is #wrapper, then .parentElement again will find the parent element of that which is the <body> -->
+
+
+<!--Children Nodes- traversing down -->
+console.log(bookList.children);
+
+
+console.log(bookList.childNodes);
+<!--What returns is a collection of text, elements, li, ul-->
+childNodes returns the line breaks (text)
